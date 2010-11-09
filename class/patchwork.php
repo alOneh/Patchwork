@@ -285,6 +285,20 @@ class
 
 		switch (self::$requestMode)
 		{
+		case 'b':
+			// Send a blank gzipped GIF to test browser capability to decode it
+			// See http://www.stevesouders.com/blog/2010/07/12/velocity-forcing-gzip-compression/
+
+			header('Content-Type: image/gif');
+			header('Content-Encoding: deflate');
+			header('Pragma: no-cache');
+			header('Expires: Fri, 01 Jan 2000 00:00:00 GMT');
+			header('Cache-Control: no-cache, must-revalidate');
+			header('Content-Length: 39');
+
+			echo base64_decode('c/d0s7BMZGRgZGhgYPj//z8DA4PiTxZGIMWgAyJAMgxMTC6MDNYA');
+			exit;
+
 		case 'k':
 
 			if ('' !== $_SERVER['PATCHWORK_LANG'])
