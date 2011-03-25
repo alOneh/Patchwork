@@ -1133,7 +1133,7 @@ class patchwork
 
             try
             {
-                new $agent instanceof agent || W("Class {$agent} does not inherit from class agent");
+                new $agent instanceof \agent || W("Class {$agent} does not inherit from class agent");
             }
             catch (e\PrivateResource $d)
             {
