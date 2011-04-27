@@ -1,12 +1,5 @@
 <?php // vi: set encoding=utf-8 expandtab shiftwidth=4:
 
-
-// Basic pieces of patchwork
-
-#patchwork pieces/pForm
-#patchwork pieces/toolbox
-
-
 // Default settings
 
 $CONFIG += array(
